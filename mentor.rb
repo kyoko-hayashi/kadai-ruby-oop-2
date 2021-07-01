@@ -11,10 +11,13 @@ class Mentor
     end    
 end    
 
+
 class RailsMentor < Mentor
     
-    def initialize
-        super('林')
+    attr_accessor :name
+    
+    def initialize(name)
+        self.name = name
     end    
 
     def job
@@ -23,9 +26,10 @@ class RailsMentor < Mentor
         
 end        
 
-mentor = Mentor.new('樋口')
-railsmentor = RailsMentor.new
+mentor = Mentor.new('煌木')
+railsmentor = RailsMentor.new('赤出')
 
 mentor.job
 railsmentor.job
+
 
